@@ -8,6 +8,7 @@ import Task from "./components/Task";
 import AddNewModal from "./components/AddNewModal";
 import v1 from "uuid/dist/v1";
 import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [columns, setColumns] = useState(
@@ -34,6 +35,7 @@ function App() {
   const handleToggleModal = (choosenColumn = "") => {
     setDisplayModal(!displayModal);
     setEditColumnIndex(choosenColumn);
+    setselectedColumn(choosenColumn);
   };
 
   const handleChangeTaskContent = (e) => {
@@ -142,11 +144,11 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App container">
       <h1 className="App__title">TO DO LIST</h1>
       <DragDropContext onDragEnd={handleSaveDrag}>
         {
-          <div className="App__content">
+          <div className="App__content row justify-content-around ">
             {columns.map((column, columnIndex) => (
               <Column
                 key={column.get("id")}
@@ -162,10 +164,10 @@ function App() {
                     >
                       {column.get("tasks").map((task, taskIndex) => (
                         <Task
-                          key={task.get("id")}
+                          key={task && task.get("id")}
                           index={taskIndex}
-                          columnId={column.get("id")}
-                          isEditing={task.get("id") === editTaskId}
+                          columnId={column && column.get("id")}
+                          isEditing={task && task.get("id") === editTaskId}
                           handleChangeTaskContent={handleChangeTaskContent}
                           task={task}
                           handleEdit={handleEdit}

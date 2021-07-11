@@ -19,7 +19,7 @@ function Task(props) {
   return (
     <Draggable
       index={index}
-      draggableId={task.get("id")}
+      draggableId={task && task.get("id")}
       isDragDisabled={isEditing}
     >
       {(provided) => (
@@ -61,12 +61,15 @@ function Task(props) {
               </div>
               <div className="task__main">
                 {isCheckbox && (
-                  <input
-                    type="checkbox"
-                    onChange={(e) => handleCheckbox(e, columnId, index)}
-                  />
+                  <div>
+                    {" "}
+                    <input
+                      className="task__btn"
+                      type="checkbox"
+                      onChange={(e) => handleCheckbox(e, columnId, index)}
+                    />
+                  </div>
                 )}
-
                 <div className="task__content">{task.get("content")}</div>
                 <div className="task__action">
                   <div className="task__btn" onClick={handleChooseEditTask}>

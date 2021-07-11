@@ -36,6 +36,7 @@
     z-index: 99;
     &__icon {
       color: rgb(5, 189, 66);
+      cursor: pointer;
       margin-left: 5px;
       &:first-child {
         color: rgb(45, 75, 80);
@@ -58,18 +59,31 @@
     padding-right: 10px;
     word-wrap: break-word;
     font-size: 17px;
+    cursor: default;
   }
   &__action {
     display: flex;
+    cursor: default;
   }
   &__btn {
     margin: 0 5px;
+    cursor: pointer;
 
     &:first-child {
       color: #5680f9;
     }
     &:nth-child(2) {
       color: #ff2f2f;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .task {
+    &__main {
+      font-size: 13px;
+    }
+    &__content {
+      font-size: 13px;
     }
   }
 }

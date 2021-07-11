@@ -17,6 +17,7 @@ function AddNewModal(props) {
         <div className="addNewModal__task-status">
           <span className="addNewModal__radio">
             <input
+              className="addNewModal__radio__input"
               type="radio"
               checked={selectedColumn === "td"}
               onChange={() => handleChangeSelectedColumn("td")}
@@ -25,6 +26,7 @@ function AddNewModal(props) {
           </span>
           <span className="addNewModal__radio">
             <input
+              className="addNewModal__radio__input"
               type="radio"
               checked={selectedColumn === "ip"}
               onChange={() => handleChangeSelectedColumn("ip")}
@@ -33,6 +35,7 @@ function AddNewModal(props) {
           </span>
           <span className="addNewModal__radio">
             <input
+              className="addNewModal__radio__input"
               type="radio"
               checked={selectedColumn === "de"}
               onChange={() => handleChangeSelectedColumn("de")}

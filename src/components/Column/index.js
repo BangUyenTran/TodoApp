@@ -4,18 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Column(props) {
   const { column, handleAddNewTask, children } = props;
   return (
-    <div className="column">
+    <div className="column col-xl-3 col-md-5 col-9">
       <div className="column__header">
-        <h2 className="column__title">
-          <span className="column__item-count">{column.get("tasks").size}</span>
-          <span className="column__text">{column.get("title")}</span>
-        </h2>
-        <p
+        <div className="column__title">
+          <div className="column__item-count">{column.get("tasks").size}</div>
+          <div className="column__text">{column.get("title")}</div>
+        </div>
+        <div
           className="column__btn"
           onClick={() => handleAddNewTask(column.get("id"))}
         >
-          <FontAwesomeIcon icon="plus-square" /> New task
-        </p>
+          <div>
+            <FontAwesomeIcon icon="plus-square" />
+          </div>
+          <div>New task</div>
+        </div>
       </div>
       <div className="column__content">{children}</div>
     </div>
