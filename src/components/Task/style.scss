@@ -47,12 +47,14 @@
     font-size: 13px;
     color: #666666;
     margin-bottom: 10px;
+    align-items: center;
     i {
       margin-right: 5px;
     }
   }
   &__main {
     display: flex;
+    align-items: center;
   }
   &__content {
     flex-grow: 2;
@@ -68,7 +70,10 @@
   &__btn {
     margin: 0 5px;
     cursor: pointer;
-
+    &__input {
+      margin-top: 7px;
+      margin-right: 5px;
+    }
     &:first-child {
       color: #5680f9;
     }

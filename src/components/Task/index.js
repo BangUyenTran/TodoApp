@@ -64,7 +64,7 @@ function Task(props) {
                   <div>
                     {" "}
                     <input
-                      className="task__btn"
+                      className="task__btn__input"
                       type="checkbox"
                       onChange={(e) => handleCheckbox(e, columnId, index)}
                     />
