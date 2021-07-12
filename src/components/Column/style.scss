@@ -1,7 +1,7 @@
 .column {
   height: fit-content;
   padding: 10px 20px;
-  .column__inside {
+  &__inside {
     background-color: rgb(106, 150, 233);
     padding: 20px;
     border-radius: 5px;
@@ -42,6 +42,13 @@
     cursor: pointer;
     &__icon {
       margin-right: 5px;
+    }
+  }
+}
+@media screen and (max-width: 995px) {
+  .column {
+    &__text {
+      font-size: 15px;
     }
   }
 }
