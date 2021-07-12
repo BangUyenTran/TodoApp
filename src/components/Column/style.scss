@@ -50,6 +50,21 @@
     &__text {
       font-size: 15px;
     }
+    &__item-count {
+      width: 20px;
+      height: 20px;
+      font-size: 15px;
+    }
+    &__btn {
+      width: 77px;
+    }
+  }
+}
+@media screen and (max-width: 765px) {
+  .column {
+    &__text {
+      font-size: 18px;
+    }
   }
 }
 @media screen and (max-width: 380px) {
@@ -68,7 +83,7 @@
     }
   }
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 310px) {
   .column {
     &__text {
       font-size: 11px;
